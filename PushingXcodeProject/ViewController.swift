@@ -63,7 +63,11 @@ class ViewController: UIViewController,MKMapViewDelegate {
         return MKPolygonRenderer()
     }
 
-   
+    @IBAction func nextPage(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SecondVC") as? SecondVC
+        self.navigationController?.pushViewController(vc!, animated: true)
+    }
+    
 }
 
         
